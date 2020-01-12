@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AstronomyLogsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AstronomyEntry">
+          <Key>
+            <PropertyRef Name="IDEntry" />
+          </Key>
+          <Property Name="IDEntry" Type="int" Nullable="false" />
+          <Property Name="Hip" Type="int" />
+          <Property Name="Hd" Type="int" />
+          <Property Name="Hr" Type="int" />
+          <Property Name="Gl" Type="int" />
+          <Property Name="Bf" Type="int" />
+          <Property Name="Proper" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ra" Type="int" />
+          <Property Name="Dec" Type="int" />
+          <Property Name="Dist" Type="int" />
+          <Property Name="Pmra" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Pmdec" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Rv" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Mag" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Absmag" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Spect" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ci" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="X" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Y" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Z" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Vx" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Vy" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Vz" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Rrad" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Decrad" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Pmrarad" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Pmdecrad" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Bayer" Type="nvarchar" MaxLength="255" />
+          <Property Name="Flam" Type="int" />
+          <Property Name="Con" Type="nvarchar" MaxLength="255" />
+          <Property Name="Comp" Type="int" />
+          <Property Name="Comp_primary" Type="int" />
+          <Property Name="Base" Type="nvarchar" MaxLength="255" />
+          <Property Name="Lum" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Var" Type="nvarchar" MaxLength="255" />
+          <Property Name="Var_min" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Var_max" Type="decimal" Precision="18" Scale="18" />
+        </EntityType>
+        <EntityContainer Name="AstronomyLogsModelStoreContainer">
+          <EntitySet Name="AstronomyEntry" EntityType="Self.AstronomyEntry" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AstronomyLogsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AstronomyLogsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AstronomyEntries" EntityType="AstronomyLogsModel.AstronomyEntry" />
+        </EntityContainer>
+        <EntityType Name="AstronomyEntry">
+          <Key>
+            <PropertyRef Name="IDEntry" />
+          </Key>
+          <Property Name="IDEntry" Type="Int32" Nullable="false" />
+          <Property Name="Hip" Type="Int32" />
+          <Property Name="Hd" Type="Int32" />
+          <Property Name="Hr" Type="Int32" />
+          <Property Name="Gl" Type="Int32" />
+          <Property Name="Bf" Type="Int32" />
+          <Property Name="Proper" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ra" Type="Int32" />
+          <Property Name="Dec" Type="Int32" />
+          <Property Name="Dist" Type="Int32" />
+          <Property Name="Pmra" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Pmdec" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Rv" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Mag" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Absmag" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Spect" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ci" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="X" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Y" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Z" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Vx" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Vy" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Vz" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Rrad" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Decrad" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Pmrarad" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Pmdecrad" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Bayer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Flam" Type="Int32" />
+          <Property Name="Con" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Comp" Type="Int32" />
+          <Property Name="Comp_primary" Type="Int32" />
+          <Property Name="Base" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Lum" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Var" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Var_min" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Var_max" Type="Decimal" Precision="18" Scale="18" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AstronomyLogsModelStoreContainer" CdmEntityContainer="AstronomyLogsEntities">
+          <EntitySetMapping Name="AstronomyEntries">
+            <EntityTypeMapping TypeName="AstronomyLogsModel.AstronomyEntry">
+              <MappingFragment StoreEntitySet="AstronomyEntry">
+                <ScalarProperty Name="Var_max" ColumnName="Var_max" />
+                <ScalarProperty Name="Var_min" ColumnName="Var_min" />
+                <ScalarProperty Name="Var" ColumnName="Var" />
+                <ScalarProperty Name="Lum" ColumnName="Lum" />
+                <ScalarProperty Name="Base" ColumnName="Base" />
+                <ScalarProperty Name="Comp_primary" ColumnName="Comp_primary" />
+                <ScalarProperty Name="Comp" ColumnName="Comp" />
+                <ScalarProperty Name="Con" ColumnName="Con" />
+                <ScalarProperty Name="Flam" ColumnName="Flam" />
+                <ScalarProperty Name="Bayer" ColumnName="Bayer" />
+                <ScalarProperty Name="Pmdecrad" ColumnName="Pmdecrad" />
+                <ScalarProperty Name="Pmrarad" ColumnName="Pmrarad" />
+                <ScalarProperty Name="Decrad" ColumnName="Decrad" />
+                <ScalarProperty Name="Rrad" ColumnName="Rrad" />
+                <ScalarProperty Name="Vz" ColumnName="Vz" />
+                <ScalarProperty Name="Vy" ColumnName="Vy" />
+                <ScalarProperty Name="Vx" ColumnName="Vx" />
+                <ScalarProperty Name="Z" ColumnName="Z" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Ci" ColumnName="Ci" />
+                <ScalarProperty Name="Spect" ColumnName="Spect" />
+                <ScalarProperty Name="Absmag" ColumnName="Absmag" />
+                <ScalarProperty Name="Mag" ColumnName="Mag" />
+                <ScalarProperty Name="Rv" ColumnName="Rv" />
+                <ScalarProperty Name="Pmdec" ColumnName="Pmdec" />
+                <ScalarProperty Name="Pmra" ColumnName="Pmra" />
+                <ScalarProperty Name="Dist" ColumnName="Dist" />
+                <ScalarProperty Name="Dec" ColumnName="Dec" />
+                <ScalarProperty Name="Ra" ColumnName="Ra" />
+                <ScalarProperty Name="Proper" ColumnName="Proper" />
+                <ScalarProperty Name="Bf" ColumnName="Bf" />
+                <ScalarProperty Name="Gl" ColumnName="Gl" />
+                <ScalarProperty Name="Hr" ColumnName="Hr" />
+                <ScalarProperty Name="Hd" ColumnName="Hd" />
+                <ScalarProperty Name="Hip" ColumnName="Hip" />
+                <ScalarProperty Name="IDEntry" ColumnName="IDEntry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
