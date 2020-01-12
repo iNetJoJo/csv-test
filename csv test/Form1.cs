@@ -42,14 +42,17 @@ namespace csv_test
         public List<AstronomyEntry> fillSQLEntry(DataTable dt)
         {
             List<AstronomyEntry> entries = new List<AstronomyEntry>();
-
-            for (int i = 0; i < 10; i++)
+            dt.Rows.GetType().GetProperties();
+            //foreach (DataRow row in dt.Rows)
+            for (int i = 0; i < 1000; i++)
             {
                 DataRow row = dt.Rows[i];
                 AstronomyEntry entry = new AstronomyEntry();
                 bool validation;
-                validation = int.TryParse(row["id"].ToString(), out int id);
-                entry.IDEntry = id;
+
+                entry.IDEntry = Convert.ToInt32(row["id"]);
+                //validation = int.TryParse(row["id"].ToString(), out int id);
+                //entry.IDEntry = id;
 
                 //validation = int.TryParse(row["hip"].ToString(), out int hip);
                 //entry.Hip = hip;
@@ -75,8 +78,8 @@ namespace csv_test
                 //validation = int.TryParse(row["dec"].ToString(), out int dec);
                 //entry.Dec = dec;
 
-                validation = int.TryParse(row["dist"].ToString(), out int dist);
-                entry.Dist = dist;
+                //validation = int.TryParse(row["dist"].ToString(), out int dist);
+                //entry.Dist = dist;
 
                 //validation = decimal.TryParse(row["pmra"].ToString(), out decimal pmra);
                 //entry.Pmra = pmra;
@@ -87,8 +90,7 @@ namespace csv_test
                 //validation = decimal.TryParse(row["rv"].ToString(), out decimal rv);
                 //entry.Rv = rv;
 
-                validation = decimal.TryParse(row["mag"].ToString(), out decimal mag);
-                entry.Mag = mag;
+                entry.Mag = Convert.ToDecimal(row["mag"]);
 
                 //validation = decimal.TryParse(row["absmag"].ToString(), out decimal absmag);
                 //entry.Absmag = absmag;
@@ -182,19 +184,27 @@ namespace csv_test
             gridView.DataSource = dt;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
 
-            fillSQLEntry(dt);
             using (var db = new AstronomyLogsEntities())
             {
                 foreach (AstronomyEntry entry in fillSQLEntry(dt))
                 {
-                    label1.Text = entry.IDEntry.ToString();
                     db.AstronomyEntries.Add(entry);
                 }
                 db.SaveChanges();
             }
+        }
+
+        private void editToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Edit edit = new Edit();
+            if (dt != null)
+            {
+                dt.Clear();
+            }
+            edit.Show();
         }
     }
 }

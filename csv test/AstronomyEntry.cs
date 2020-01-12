@@ -23,7 +23,7 @@ namespace csv_test
         public string Proper { get; set; }
         public Nullable<int> Ra { get; set; }
         public Nullable<int> Dec { get; set; }
-        public Nullable<int> Dist { get; set; }
+        public Nullable<decimal> Dist { get; set; }
         public Nullable<decimal> Pmra { get; set; }
         public Nullable<decimal> Pmdec { get; set; }
         public Nullable<decimal> Rv { get; set; }
@@ -51,5 +51,6 @@ namespace csv_test
         public string Var { get; set; }
         public Nullable<decimal> Var_min { get; set; }
         public Nullable<decimal> Var_max { get; set; }
+        public string Name { get; set; }
     }
 }

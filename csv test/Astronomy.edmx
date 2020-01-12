@@ -18,34 +18,35 @@
           <Property Name="Proper" Type="nvarchar" MaxLength="255" />
           <Property Name="Ra" Type="int" />
           <Property Name="Dec" Type="int" />
-          <Property Name="Dist" Type="int" />
-          <Property Name="Pmra" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Pmdec" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Rv" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Mag" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Absmag" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Dist" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Pmra" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Pmdec" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Rv" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Mag" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Absmag" Type="decimal" Precision="38" Scale="20" />
           <Property Name="Spect" Type="nvarchar" MaxLength="255" />
-          <Property Name="Ci" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="X" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Y" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Z" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Vx" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Vy" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Vz" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Rrad" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Decrad" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Pmrarad" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Pmdecrad" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Ci" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="X" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Y" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Z" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Vx" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Vy" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Vz" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Rrad" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Decrad" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Pmrarad" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Pmdecrad" Type="decimal" Precision="38" Scale="20" />
           <Property Name="Bayer" Type="nvarchar" MaxLength="255" />
           <Property Name="Flam" Type="int" />
           <Property Name="Con" Type="nvarchar" MaxLength="255" />
           <Property Name="Comp" Type="int" />
           <Property Name="Comp_primary" Type="int" />
           <Property Name="Base" Type="nvarchar" MaxLength="255" />
-          <Property Name="Lum" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Lum" Type="decimal" Precision="38" Scale="20" />
           <Property Name="Var" Type="nvarchar" MaxLength="255" />
-          <Property Name="Var_min" Type="decimal" Precision="18" Scale="18" />
-          <Property Name="Var_max" Type="decimal" Precision="18" Scale="18" />
+          <Property Name="Var_min" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Var_max" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="AstronomyLogsModelStoreContainer">
           <EntitySet Name="AstronomyEntry" EntityType="Self.AstronomyEntry" Schema="dbo" store:Type="Tables" />
@@ -70,34 +71,35 @@
           <Property Name="Proper" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Ra" Type="Int32" />
           <Property Name="Dec" Type="Int32" />
-          <Property Name="Dist" Type="Int32" />
-          <Property Name="Pmra" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Pmdec" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Rv" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Mag" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Absmag" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Dist" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Pmra" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Pmdec" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Rv" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Mag" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Absmag" Type="Decimal" Precision="38" Scale="20" />
           <Property Name="Spect" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Ci" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="X" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Y" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Z" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Vx" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Vy" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Vz" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Rrad" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Decrad" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Pmrarad" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Pmdecrad" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Ci" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="X" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Y" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Z" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Vx" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Vy" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Vz" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Rrad" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Decrad" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Pmrarad" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Pmdecrad" Type="Decimal" Precision="38" Scale="20" />
           <Property Name="Bayer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Flam" Type="Int32" />
           <Property Name="Con" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Comp" Type="Int32" />
           <Property Name="Comp_primary" Type="Int32" />
           <Property Name="Base" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Lum" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Lum" Type="Decimal" Precision="38" Scale="20" />
           <Property Name="Var" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Var_min" Type="Decimal" Precision="18" Scale="18" />
-          <Property Name="Var_max" Type="Decimal" Precision="18" Scale="18" />
+          <Property Name="Var_min" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Var_max" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -108,6 +110,7 @@
           <EntitySetMapping Name="AstronomyEntries">
             <EntityTypeMapping TypeName="AstronomyLogsModel.AstronomyEntry">
               <MappingFragment StoreEntitySet="AstronomyEntry">
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Var_max" ColumnName="Var_max" />
                 <ScalarProperty Name="Var_min" ColumnName="Var_min" />
                 <ScalarProperty Name="Var" ColumnName="Var" />
