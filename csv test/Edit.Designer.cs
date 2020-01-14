@@ -1,6 +1,6 @@
 ﻿namespace csv_test
 {
-    partial class Edit
+    partial class EditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -51,15 +51,15 @@
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // Edit
+            // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 450);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.dbGrid);
-            this.Name = "Edit";
-            this.Text = "Edit";
+            this.Name = "EditForm";
+            this.Text = "EditForm";
             ((System.ComponentModel.ISupportInitialize)(this.dbGrid)).EndInit();
             this.ResumeLayout(false);
 

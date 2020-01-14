@@ -11,14 +11,21 @@ using System.Windows.Forms;
 
 namespace csv_test
 {
-    public partial class Edit : Form
+    public partial class EditForm : Form
     {
-        public Edit()
+        public EditForm()
         {
             InitializeComponent();
             using (var db = new AstronomyLogsEntities())
             {
                 dbGrid.DataSource = db.AstronomyEntries.Where(e => !String.IsNullOrEmpty(e.Proper)).ToList();
+
+                dbGrid.Columns["Name"].DisplayIndex = 1;
+
+                for (int i = 0; i < dbGrid.Columns.Count; i++)
+                {
+                        dbGrid.Columns[i].ReadOnly = dbGrid.Columns[i].Name != "Name";
+                }
             }
             
         }
@@ -29,9 +36,14 @@ namespace csv_test
             {
                 using (var db = new AstronomyLogsEntities())
                 {
-                    AstronomyEntry entry = db.AstronomyEntries.Where(en => en.IDEntry == int.Parse(row.Cells[0].Value.ToString())).FirstOrDefault();
-                    entry.Name = row.Cells["Name"].Value.ToString();
-                    db.Entry(entry).State = EntityState.Modified;
+                    int id = int.Parse(row.Cells[0].Value.ToString());
+                    AstronomyEntry entry = db.AstronomyEntries.Where(en => en.IDEntry == id).FirstOrDefault();
+                    string name = row.Cells["Name"].Value.ToString();
+                    if (!string.IsNullOrEmpty(name))
+                    {
+                        entry.Name = row.Cells["Name"].Value.ToString();
+                        db.Entry(entry).State = EntityState.Modified;
+                    }
                     db.SaveChanges();
                 }
             }

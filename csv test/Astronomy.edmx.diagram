@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="da4a10b8b17545999bf5e6d630d997cc" Name="Diagram1">
+      <Diagram DiagramId="da4a10b8b17545999bf5e6d630d997cc" Name="Diagram1" ZoomLevel="75">
         <EntityTypeShape EntityType="AstronomyLogsModel.AstronomyEntry" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
